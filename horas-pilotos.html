@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega Lite</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.14.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.10.0"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Horas de los pilotos</h1>
+    <h3>Mes: Julio</h3>
+    <h3>Año 2020</h3>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+    
+    
+    <script>
+      // Assign the specification to a local variable vlSpec.
+      var vlSpec = {
+                      "data": {
+                                "values": [{"tripulante_id":7,"year":2020,"month":7,"cte":6.900000035762787,"pil":0.699999988079071,"copi":6.200000047683716,"inst":null,"tot":6.900000035762787,"instrumental_real":1.300000011920929,"instrumental_simulado":null,"noc":0.6000000238418579},{"tripulante_id":1,"year":2020,"month":7,"cte":null,"pil":6.200000047683716,"copi":0.699999988079071,"inst":null,"tot":6.900000035762787,"instrumental_real":1.8000000715255737,"instrumental_simulado":null,"noc":0.6000000238418579},{"tripulante_id":17,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":4.800000011920929,"instrumental_real":null,"instrumental_simulado":null,"noc":null},{"tripulante_id":10,"year":2020,"month":7,"cte":10.499999940395355,"pil":8.999999940395355,"copi":1.5,"inst":null,"tot":10.499999940395355,"instrumental_real":7.599999964237213,"instrumental_simulado":null,"noc":2.400000035762787},{"tripulante_id":16,"year":2020,"month":7,"cte":null,"pil":null,"copi":3.800000011920929,"inst":null,"tot":3.800000011920929,"instrumental_real":3.800000011920929,"instrumental_simulado":null,"noc":2.400000035762787},{"tripulante_id":18,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":3.800000011920929,"instrumental_real":null,"instrumental_simulado":null,"noc":null},{"tripulante_id":19,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":2.400000035762787,"instrumental_real":null,"instrumental_simulado":null,"noc":null},{"tripulante_id":8,"year":2020,"month":7,"cte":10.800000101327896,"pil":6.800000071525574,"copi":4.000000029802322,"inst":null,"tot":10.800000101327896,"instrumental_real":8.899999886751175,"instrumental_simulado":null,"noc":2.6999999582767487},{"tripulante_id":13,"year":2020,"month":7,"cte":null,"pil":3.1999999582767487,"copi":3.5999999046325684,"inst":null,"tot":10.199999839067459,"instrumental_real":6.099999934434891,"instrumental_simulado":null,"noc":2.1999999582767487},{"tripulante_id":20,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":3.499999910593033,"instrumental_real":null,"instrumental_simulado":null,"noc":null},{"tripulante_id":4,"year":2020,"month":7,"cte":null,"pil":2.3000000715255737,"copi":5.0000001192092896,"inst":null,"tot":7.300000190734863,"instrumental_real":5.599999904632568,"instrumental_simulado":null,"noc":0.5},{"tripulante_id":21,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":6.600000023841858,"instrumental_real":null,"instrumental_simulado":null,"noc":null},{"tripulante_id":15,"year":2020,"month":7,"cte":null,"pil":null,"copi":3.399999976158142,"inst":null,"tot":3.399999976158142,"instrumental_real":1,"instrumental_simulado":null,"noc":null},{"tripulante_id":22,"year":2020,"month":7,"cte":null,"pil":null,"copi":null,"inst":null,"tot":6.699999928474426,"instrumental_real":null,"instrumental_simulado":null,"noc":null}]
+                              },
+                      "mark": "bar",
+                      "encoding": {
+                        "x": {"field": "tripulante_id", "type": "nominal"},
+                        "y": {"field": "tot", "type": "quantitative"}
+                      }
+                    };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
+</html>
