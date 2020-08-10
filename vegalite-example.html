@@ -20,10 +20,6 @@
     <h3>Precipitaciones</h1>
     <!-- Container for the visualization -->
     <div id="vis"></div>
-        
-    <h3>Histograma de Precipitaciones</h1>
-    <!-- Container for the visualization -->
-    <div id="vis2"></div>
 
     <script>
       // Assign the specification to a local variable vlSpec.
@@ -38,18 +34,6 @@
       // Embed the visualization in the container with id `vis`
       vegaEmbed('#vis', vlSpec);
 
-      // Assign the specification to a local variable vlSpec.
-      var v2Spec = {
-                      "data": {"url": "data/seattle-weather.csv"},
-                      "mark": "bar",
-                      "encoding": {
-                        "x": {"bin": true, "field": "precipitation"},
-                        "y": {"aggregate": "count"}
-                      }
-                    };
-
-      // Embed the visualization in the container with id `vis`
-      vegaEmbed('#vis2', v2Spec);
     </script>
   </body>
 </html>
