@@ -8,3 +8,4 @@ Information Visualization
 # Otros
 >[Vega Lite - Exploring Data](https://hmreumann.github.io/infovis/exploring-data/)<br>
 >Horas pilotos: [Vega Lite - Barplot](https://hmreumann.github.io/infovis/horas-pilotos/) - [D3 - Barplot Stacked](https://hmreumann.github.io/infovis/horas-pilotos/horas-pil-copi-stacked.html)<br>
+>Aterrizajes Jun, Jul y Ago 2020: [Vega Lite - Stacked Barplot](https://hmreumann.github.io/infovis/horas-pilotos/aterrizajes-jja.html)
