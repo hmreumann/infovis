@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aterrizajes por piloto</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.14.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.10.0"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Aterrizajes por piloto</h1>
+    <h3>Junio, Julio y Agosto 2020</h3>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+      // Assign the specification to a local variable vlSpec.
+      var vlSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/hmreumann/infovis/gh-pages/data/aterrizajes.json"},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "nombre",
+      "title": "Piloto"
+    },
+    "y": {
+      "field": "cantidad",
+      "type": "quantitative",
+      "title": "Aterrizajes"
+    },
+    "color": {
+      "field": "tipo",
+      "scale": {
+        "domain": ["Pista Nocturno", "Pista Diurno"],
+        "range": ["#aec7e8", "#1f77b4", "#e7ba52", "#9467bd", "#c7c7c7"]
+      },
+      "title": "Tipo de Aterrizaje"
+    }
+  }
+}
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
+</html>
