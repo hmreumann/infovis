@@ -11,4 +11,4 @@ Information Visualization
 >Aterrizajes Jun, Jul y Ago 2020 (21/8/2020): [Vega Lite - Stacked Barplot](https://hmreumann.github.io/infovis/horas-pilotos/aterrizajes-jja.html)
 
 # TP Final
-[Lua Vs Lisa](https://hmreumann.github.io/luavslisa/master/public_html/index.html)
+>[Lua Vs Lisa](https://hmreumann.github.io/luavslisa/public_html/index.html)
